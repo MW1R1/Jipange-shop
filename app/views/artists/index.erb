@@ -3,8 +3,12 @@
   <% @artists.each do |artist| %>
     <li>
       <%= link_to artist.name, artist %>
-      <%= link_to "View Galleries", artist_galleries_path(artist), class: "btn btn-primary" %>
-      <%= link_to "View Paintings", artist_paintings_path(artist), class: "btn btn-primary" %>
+      <%= link_to artist_galleries_path(artist), class: "btn btn-primary" do %>
+        View Galleries
+      <% end %>
+      <%= link_to artist_paintings_path(artist), class: "btn btn-primary" do %>
+        View Paintings
+      <% end %>
     </li>
   <% end %>
 </ul>

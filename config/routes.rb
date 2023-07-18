@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     get 'paintings/index'
     get 'galleries/index'
   end
-  resources :paintings, only: [:index, :show, :new, :create, :destroy]
+  resources :paintings, only: [:index, :show, :new, :create, :edit, :update, :destroy]
   resources :galleries
   resources :artists do
     resources :galleries, only: [:index], controller: 'artists/galleries'

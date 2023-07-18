@@ -1,2 +1,9 @@
-<h1>Artists::Galleries#index</h1>
-<p>Find me in app/views/artists/galleries/index.html.erb</p>
+<h2>Art Galleries for <%= @artist.name %></h2>
+<% @galleries.each do |gallery| %>
+  <div>
+    <h3><%= gallery.name %></h3>
+    <p>Location: <%= gallery.location %></p>
+    <!-- Add any additional gallery information you want to display here -->
+  </div>
+  <hr>
+<% end %>

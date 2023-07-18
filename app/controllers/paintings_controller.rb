@@ -1,4 +1,18 @@
 class PaintingsController < ApplicationController
+  def edit
+    @painting = Painting.find(params[:id])
+    @galleries = Gallery.all
+    @artists = Artist.all
+  end
+
+  def update
+    @painting = Painting.find(params[:id])
+    if @painting.update(painting_params)
+      redirect_to @painting
+    else
+      render :edit
+    end
+  end
     def index
       @paintings = Painting.all
     end

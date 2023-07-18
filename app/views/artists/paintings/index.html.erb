@@ -1,2 +1,9 @@
-<h1>Artists::Paintings#index</h1>
-<p>Find me in app/views/artists/paintings/index.html.erb</p>
+<h2>Art Paintings for <%= @artist.name %></h2>
+<% @paintings.each do |painting| %>
+  <div>
+    <h3><%= painting.name %></h3>
+    <p>Price: <%= painting.price %></p>
+    <!-- Add any additional painting information you want to display here -->
+  </div>
+  <hr>
+<% end %>
