@@ -1,3 +1,96 @@
+## Jipange Shop - Ruby on Rails and React App
+Jipange Shop is a web application built using Ruby on Rails as the backend framework and React as the frontend library. The app allows users to explore various art galleries and artists' profiles. It is designed to provide an immersive experience for art enthusiasts and collectors.
+
+## Features
+Explore Galleries: Users can browse through a list of art galleries to discover different art collections.
+
+### Artist Profiles
+Get to know more about artists by viewing their profiles, which include their name, age, experience level, and a list of their paintings.
+
+### Painting Details
+Click on a painting from an artist's profile to view detailed information about that painting.
+
+### User Authentication
+The app features a login page where users can sign in to access personalized features.
+
+### Logout
+Users can log out of their accounts when they're done using the app.
+
+### Getting Started
+To run the Jipange Shop app locally, follow these steps:
+
+### Prerequisites
+Ensure you have Ruby, Ruby on Rails, Node.js, and npm (Node Package Manager) installed on your machine.
+
+### Clone the Repository
+Open your terminal and navigate to the desired directory. Then, clone the Jipange Shop repository using the following command:
+git clone https://github.com/your-username/Jipange-Shop.git
+
+### Install Dependencies
+Move into the project directory and install the required dependencies for both the Rails backend and React frontend:
+
+cd Jipange-Shop
+bundle install
+cd client
+npm install
+
+### Start the Development Servers
+In separate terminal tabs or windows, run the following commands to start the Rails server and React development server:
+
+# Terminal 1 - Start Rails server
+rails server
+
+# Terminal 2 - Start React development server
+cd client
+npm start
+Access the App: Open your web browser and visit http://localhost:3000 to access the Jipange Shop app.
+
+## Folder Structure
+The project folder structure is organized as follows:
+
+Jipange-Shop/
+  ├── app/
+  │   └── ...          # Contains Ruby on Rails application files
+  ├── client/
+  │   ├── public/
+  │   │   └── index.html
+  │   ├── src/
+  │   │   ├── components/
+  │   │   │   └── ...  # Contains reusable React components
+  │   │   ├── pages/
+  │   │   │   └── ...  # Contains individual React pages (e.g., HomePage, ArtistProfilePage)
+  │   │   ├── App.js
+  │   │   ├── index.js
+  │   │   └── ...
+  │   ├── package.json
+  │   └── ...          # Contains React-specific configuration files
+  ├── config/
+  │   └── ...          # Contains Ruby on Rails configuration files
+  ├── package.json     # Contains dependencies and scripts for the overall project
+  ├── Gemfile          # Specifies Ruby gem dependencies
+  └── ...
+## Contributing
+If you'd like to contribute to the Jipange Shop project, please follow these steps:
+
+Fork the repository on GitHub.
+
+Create a new branch for your feature or bug fix.
+
+Make your changes and commit them with descriptive commit messages.
+
+Push your changes to your forked repository.
+
+Submit a pull request to the original repository.
+
+License
+The Jipange Shop app is open-source and distributed under the MIT License. Feel free to use and modify the code as per the license terms.
+
+Contact
+For any questions or suggestions, feel free to contact the project maintainers:
+
+Name: Nick Mwirigi
+Email:
+We hope you enjoy contributing to and using the Jipange Shop app! Happy exploring and coding! 🎨🚀
 ## Environment Setup
 
 Before starting, make sure your computer has all the necessary tools to build
