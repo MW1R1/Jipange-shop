@@ -1,6 +1,6 @@
 Artist.destroy_all
 Gallery.destroy_all
-painting.destroy_all
+Painting.destroy_all
 
 artist1 = Artist.create(name: "Nick", age: 100, experience: 1000)
 artist2 = Artist.create(name: "Manu", age: 20, experience: 900)
@@ -25,5 +25,10 @@ gal9 = Gallery.create(name: "Capslock", location: "Parklands")
 gal10 = Gallery.create(name: "Tab", location: "Kitsuru")
 
 5.times do
-    painting.create(name: Faker::Name.name, price: Faker::number.between(from:1000,to:10000), artist_id: Artist.ids.sample, gallery_id: Gallery.ids.sample)
+  Painting.create(
+    name: Faker::Name.name,
+    price: Faker::Number.between(from: 1000, to: 10000),
+    artist_id: Artist.ids.sample,
+    gallery_id: Gallery.ids.sample
+  )
 end

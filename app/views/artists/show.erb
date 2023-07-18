@@ -1,12 +1,14 @@
 <h2><%= "#{@artist.name}'s Profile" %></h2>
-<label>Name: </label>
-<%@artist.name %><br>
-<label>Age: </label>
+<label>Name:</label>
+<%= @artist.name %><br>
+<label>Age:</label>
 <%= @artist.age %><br>
-<label>Experience Level:</label> <%= @artist.experience %><br>
-<label>Here is a list of all my paintings: </label>
+<label>Experience Level:</label>
+<%= @artist.experience %><br>
+<label>Here is a list of all my paintings:</label>
 <ul>
+  <% @artist.paintings.each do |painting| %>
+    <li><%= link_to painting.name, painting %></li>
+  <% end %>
 </ul>
-<%@artist.paintings. each do Ipainting! %> <li><%= link_to painting. name, painting %></li> 
-<% end %>
 <%= button_to "Click Here to Retire", @artist, method: :delete %>
