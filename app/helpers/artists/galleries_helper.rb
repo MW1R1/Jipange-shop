@@ -1,0 +1,2 @@
+module Artists::GalleriesHelper
+end

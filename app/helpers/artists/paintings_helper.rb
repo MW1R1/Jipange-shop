@@ -1,0 +1,2 @@
+module Artists::PaintingsHelper
+end

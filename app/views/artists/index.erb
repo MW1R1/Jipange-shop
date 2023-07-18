@@ -1,6 +1,10 @@
-<h2>Here are all the cool and Talented Artists<h2>
+<h2>Here are all the cool and Talented Artists</h2>
 <ul>
-<% @artists.each do | artist| %>
-    <li><%=link_to artist.name, artist %></li><br>
-    <%end%>
+  <% @artists.each do |artist| %>
+    <li>
+      <%= link_to artist.name, artist %>
+      <%= link_to "View Galleries", artist_galleries_path(artist), class: "btn btn-primary" %>
+      <%= link_to "View Paintings", artist_paintings_path(artist), class: "btn btn-primary" %>
+    </li>
+  <% end %>
 </ul>
