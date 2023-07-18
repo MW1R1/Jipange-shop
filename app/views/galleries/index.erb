@@ -1,6 +1,10 @@
-<h2>Here are all the Galleries</h2>
-<ul>
-  <% @galleries.each do |gallery| %>
-    <li><%= link_to gallery.name, gallery %></li>
-  <% end %>
-</ul>
+<div style="text-align: center;">
+  <h2 style="font-size: 24px;">Here are all the Galleries</h2>
+  <ul style="list-style: none; padding: 0;">
+    <% @galleries.each do |gallery| %>
+      <li style="margin-bottom: 10px;">
+        <%= link_to gallery.name, gallery, style: "text-decoration: none; color: #007bff; font-size: 16px; font-weight: bold;" %>
+      </li>
+    <% end %>
+  </ul>
+</div>

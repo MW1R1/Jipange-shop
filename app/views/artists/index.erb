@@ -1,14 +1,14 @@
-<h2>Here are all the cool and Talented Artists</h2>
-<ul>
-  <% @artists.each do |artist| %>
-    <li>
-      <%= link_to artist.name, artist %>
-      <%= link_to artist_galleries_path(artist), class: "btn btn-primary" do %>
-        View Galleries
-      <% end %>
-      <%= link_to artist_paintings_path(artist), class: "btn btn-primary" do %>
-        View Paintings
-      <% end %>
-    </li>
-  <% end %>
-</ul>
+<div style="text-align: center;">
+  <h2 style="font-size: 24px;">Here are all the cool and Talented Artists</h2>
+  <ul style="list-style: none; padding: 0;">
+    <% @artists.each do |artist| %>
+      <li style="margin-bottom: 20px;">
+        <a href="<%= artist_path(artist) %>" style="text-decoration: Bold; color: #007bff; font-size: 18px; font-weight: bold;">
+          <%= artist.name %>
+        </a><br>
+        <a href="<%= artist_galleries_path(artist) %>" class="btn" style="display: inline-block; font-size: 16px; background-color: #007bff; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; text-transform: uppercase;">View Galleries</a>
+        <a href="<%= artist_paintings_path(artist) %>" class="btn" style="display: inline-block; font-size: 16px; background-color: #6c757d; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: italics; text-transform: uppercase;">View Paintings</a>
+      </li>
+    <% end %>
+  </ul>
+</div>
