@@ -1,0 +1,12 @@
+<h2><%= "#{@gallery.name}'s Profile" %></h2>
+<label>Name: </label>
+<%= @gallery.name %><br>
+<label>Location: </label>
+<%= @gallery.location %><br>
+<label>Here is a list of all the paintings in this gallery:</label>
+<ul>
+  <% @gallery.paintings.each do |painting| %>
+    <li><%= link_to painting.name, painting %></li>
+  <% end %>
+</ul>
+<%= button_to "Delete this Gallery", @gallery, method: :delete %>

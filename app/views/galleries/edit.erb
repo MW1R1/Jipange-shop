@@ -1,0 +1,8 @@
+<h2>Edit a Gallery HERE</h2>
+<%= form_for @gallery do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true %><br>
+  <%= f.label :location %>
+  <%= f.text_field :location, required: true %><br>
+  <%= f.submit "Update Gallery" %>
+<% end %>

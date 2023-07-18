@@ -1,0 +1,6 @@
+<h2>Here are all the Galleries</h2>
+<ul>
+  <% @galleries.each do |gallery| %>
+    <li><%= link_to gallery.name, gallery %></li>
+  <% end %>
+</ul>
